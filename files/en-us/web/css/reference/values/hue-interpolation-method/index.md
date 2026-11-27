@@ -9,14 +9,25 @@ sidebar: cssref
 ---
 
 The **`<hue-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents the algorithm used for interpolation between {{cssxref("hue")}} values.
-The interpolation method specifies how to find a midpoint between two hue values based on a color wheel.
-It is used as a component of the {{CSSXref("&lt;color-interpolation-method&gt;")}} data type.
 
-When interpolating `<hue>` values, the hue interpolation algorithm defaults to [`shorter`](#shorter).
+## Associated properties and functions
+
+This data type is accepted in the value of the following CSS property:
+
+- {{cssxref("color-interpolation")}}
+
+This data type is also accepted as a parameter of the following CSS functions:
+
+- {{cssxref("color-mix()")}}
+- {{cssxref("conic-gradient()")}}
+- {{cssxref("linear-gradient()")}}
+- {{cssxref("font-palette/palette-mix","palette-mix()")}}
+- {{cssxref("radial-gradient()")}}
+- {{cssxref("repeating-conic-gradient()")}}
+- {{cssxref("repeating-linear-gradient()")}}
+- {{cssxref("repeating-radial-gradient()")}}
 
 ## Syntax
-
-A `<hue-interpolation-method>` value consists of the name of a hue interpolation algorithm followed by a literal token `hue`:
 
 ```plain
 shorter hue
@@ -27,48 +38,80 @@ decreasing hue
 
 ### Values
 
+This data type is specified as the name of a hue interpolation algorithm followed by a literal token `hue`, including:
+
+- `shorter hue`
+  - : Specifies the shorter arc should be used. This is the default.
+
+- `longer hue`
+  - : Specifies the longer arc should be used.
+
+- `increasing hue`
+  - : Specifies a clockwise arc should be used
+
+- `decreasing hue`
+  - : Specifies a counter-clockwise arc should be used
+
+## Description
+
+The `<hue-interpolation-method>` data type specifies the algorithm used for interpolation between {{cssxref("hue")}} values. The interpolation method specifies how to find a midpoint between two hue values based on a color wheel.
+It is used as a component of the {{CSSXref("&lt;color-interpolation-method&gt;")}} data type.
+
+A `<hue-interpolation-method>` value consists of the name of a hue interpolation algorithm, either `longer`, `shorter`, `increase` or `decrease` followed by a literal token `hue`. When interpolating `<hue>` values, the hue interpolation algorithm defaults to [`shorter`](#shorter).
+
+### Hue algorithms
+
 Any pair of hue angles correspond to two radii on the {{Glossary("color wheel")}}, which cut the circumference into two possible arcs for interpolation. Both arcs start at the first radius and end at the second radius, but one goes clockwise and the other goes counterclockwise.
+
+For a pair of hue angles `θ1` and `θ2` normalized to the range `[0deg, 360deg)`, there are four algorithms to determine which arc is used when interpolating from `θ1` to `θ2`.
 
 > [!NOTE]
 > The following descriptions and illustrations are based on color wheels in which hue angles increase in a clockwise direction. Be aware that there are color wheels where an increase in angles will be a counterclockwise operation.
 
-For a pair of hue angles `θ1` and `θ2` normalized to the range `[0deg, 360deg)`, there are four algorithms to determine which arc is used when interpolating from `θ1` to `θ2`:
+#### Shorter hue
 
-- `shorter`
-  - : Use the shorter arc. When the two radii coincide, the arc degenerates to a single point. When both arcs have the same lengths:
-    - If `θ1 < θ2`, use the clockwise arc;
-    - If `θ1 > θ2`, use the counterclockwise arc.
+When `shorter hue` is specified or defaulted, the shorter arc is used. In this case, when the two radii coincide, the arc degenerates to a single point. When both arcs have the same length:
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                        | `θ1 = 135deg`, `θ2 = 45deg`                                        |
-    | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
-    | ![shorter with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![shorter with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
+- If `θ1 < θ2`, use the clockwise arc.
 
-- `longer`
-  - : Use the longer arc. When the two radii coincide:
-    - If `θ1 ≤ θ2`, the arc becomes the full circumference with a clockwise orientation.
-    - If `θ1 > θ2`, the arc becomes the full circumference with a counterclockwise orientation.
+- If `θ1 > θ2`, use the counterclockwise arc.
 
-    When both arcs have the same lengths:
-    - If `θ1 < θ2`, use the clockwise arc;
-    - If `θ1 > θ2`, use the counterclockwise arc.
+| `θ1 = 45deg`, `θ2 = 135deg`                                        | `θ1 = 135deg`, `θ2 = 45deg`                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| ![shorter with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![shorter with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                      | `θ1 = 135deg`, `θ2 = 45deg`                                      |
-    | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-    | ![longer with θ1 = 45deg and θ2 = 135deg](longer_decreasing.png) | ![longer with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
+#### Longer hue
 
-- `increasing`
-  - : Use the clockwise arc. When the two radii coincide, the arc degenerates to a single point.
+When `longer hue` is specified, the longer arc is used. In this case, when the two radii coincide:
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                           | `θ1 = 135deg`, `θ2 = 45deg`                                          |
-    | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
-    | ![increasing with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![increasing with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
+- If `θ1 > θ2`, the arc becomes the full circumference with a counterclockwise orientation.
 
-- `decreasing`
-  - : Use the counterclockwise arc. When the two radii coincide, the arc degenerates to a single point.
+When both arcs have the same length:
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                          | `θ1 = 135deg`, `θ2 = 45deg`                                           |
-    | -------------------------------------------------------------------- | --------------------------------------------------------------------- |
-    | ![decreasing with θ1 = 45deg and θ2 = 135deg](longer_decreasing.png) | ![decreasing with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
+- If `θ1 < θ2`, use the clockwise arc.
+- If `θ1 > θ2`, use the counterclockwise arc.
+
+| `θ1 = 45deg`, `θ2 = 135deg`                                      | `θ1 = 135deg`, `θ2 = 45deg`                                      |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| ![longer with θ1 = 45deg and θ2 = 135deg](longer_decreasing.png) | ![longer with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
+
+#### Increasing hue
+
+When `increasing hue` is specified, the clockwise arc is used. In this case, when the two radii coincide, the arc degenerates to a single point.
+
+| `θ1 = 45deg`, `θ2 = 135deg`                                           | `θ1 = 135deg`, `θ2 = 45deg`                                          |
+| --------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| ![increasing with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![increasing with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
+
+#### Decreasing hue
+
+When `decreasing hue` is specified, the counterclockwise arc is used. In this case, when the two radii coincide, the arc degenerates to a single point.
+
+| `θ1 = 45deg`, `θ2 = 135deg`                                          | `θ1 = 135deg`, `θ2 = 45deg`                                           |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| ![decreasing with θ1 = 45deg and θ2 = 135deg](longer_decreasing.png) | ![decreasing with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
+
+### Pairwise equivalent
 
 As there are only two arcs to choose from, these algorithms are pairwise equivalent under certain circumstances. Specifically:
 

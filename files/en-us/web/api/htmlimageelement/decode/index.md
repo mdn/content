@@ -10,7 +10,9 @@ browser-compat: api.HTMLImageElement.decode
 
 The **`decode()`** method of the {{domxref("HTMLImageElement")}} interface returns a {{jsxref("Promise")}} that resolves once the image is decoded and is safe to be appended to the DOM.
 
-This can be used to initiate loading of the image prior to attaching it to an element in the DOM (or adding it to the DOM as a new element), so that the image can be rendered immediately upon being added to the DOM. This, in turn, prevents the rendering of the next frame after adding the image to the DOM from causing a delay while the image loads.
+Use `decode()` to wait until an image has loaded and been decoded before adding it to the DOM, so that it can render immediately when added.
+Calling `decode()` does not start loading the image: loading begins when `src` or `srcset` are set (or, for images with `loading="lazy"`, when the image approaches the viewport).
+The returned promise fulfills after loading and decoding are complete.
 
 ## Syntax
 
