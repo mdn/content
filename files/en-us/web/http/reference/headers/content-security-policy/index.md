@@ -138,10 +138,10 @@ for example.
 
 ### Reporting directives
 
-Reporting directives control the destination URL for CSP violation reports in `Content-Security-Policy` and {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
+Reporting directives control the destination for CSP reports, such as violation reports and [hash reports](#hash_reporting_keywords), for policies delivered using `Content-Security-Policy` and {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 
 - {{CSP("report-to")}}
-  - : Provides the browser with a token identifying the reporting endpoint or group of endpoints to send CSP violation information to.
+  - : Provides the browser with a token identifying the reporting endpoint or group of endpoints to send CSP reports to.
     The endpoints that the token represents are provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}} and {{HTTPHeader("Report-To")}} {{deprecated_inline}}.
 
     > [!WARNING]
@@ -374,6 +374,20 @@ See [The `strict-dynamic` keyword](/en-US/docs/Web/HTTP/Guides/CSP#the_strict-dy
 ### 'report-sample'
 
 If this expression is included in a directive controlling scripts or styles, and the directive causes the browser to block any inline scripts, inline styles, or event handler attributes, then the [violation report](/en-US/docs/Web/HTTP/Guides/CSP#violation_reporting) that the browser generates will contain a {{domxref("CSPViolationReport.sample", "sample")}} property containing the first 40 characters of the blocked resource.
+
+### Hash reporting keywords
+
+The `'report-sha256'`, `'report-sha384'`, and `'report-sha512'` keywords instruct the browser to generate reports containing the URLs and hashes of external scripts loaded by the document. They select SHA-256, SHA-384, and SHA-512, respectively, as the algorithm used to calculate the hashes.
+
+These keywords apply to {{CSP("script-src")}} and {{CSP("script-src-elem")}}, or to {{CSP("default-src")}} when it acts as a fallback for these directives. They do not authorize scripts to load or execute.
+
+Hash reports are generated only for requests with [script-like destinations](https://fetch.spec.whatwg.org/#request-destination-script-like). Even when a keyword is included in `default-src`, it does not enable hash reports for images, stylesheets, fonts, or other non-script resources. Inline scripts and event handlers do not generate hash reports either.
+
+If a directive contains more than one of these keywords, only the strongest requested algorithm is used: SHA-512 takes precedence over SHA-384, which takes precedence over SHA-256.
+
+Reports have a type of `"csp-hash"` and are sent using the [Reporting API](/en-US/docs/Web/API/Reporting_API) to the endpoint selected by the policy's {{CSP("report-to")}} directive. Unlike violation reports, hash reports do not require a CSP violation. They can be generated for both {{HTTPHeader("Content-Security-Policy")}} and {{HTTPHeader("Content-Security-Policy-Report-Only")}} policies. The {{CSP("report-uri")}} directive cannot be used to send hash reports.
+
+See [Hash reporting](/en-US/docs/Web/HTTP/Guides/CSP#hash_reporting) in the CSP guide for configuration details and an example report.
 
 ## CSP in workers
 
