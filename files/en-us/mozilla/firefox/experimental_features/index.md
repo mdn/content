@@ -135,43 +135,6 @@ The {{httpheader("Speculation-Rules")}} HTTP response header lists the URLs of e
 - `dom.speculation_rules.enabled`
   - : Set to `true` to enable.
 
-### Cross-document view transitions
-
-[Cross-document view transitions](/en-US/docs/Web/API/View_Transition_API/Using#basic_mpa_view_transition) can be used to animate the transition between same-origin page navigations in a multi-page application.
-Both pages must opt in to the transition using the CSS {{cssxref("@view-transition")}} at-rule.
-To customize the transition with JavaScript, use the {{domxref("Window.pageswap_event", "pageswap")}} event ({{domxref("PageSwapEvent")}}), which fires on the old page just before it is replaced. You can also use the {{domxref("Window.pagereveal_event", "pagereveal")}} event ({{domxref("PageRevealEvent")}}), which fires on the new page when it is first shown.
-The {{domxref("CSSViewTransitionRule")}} interface represents an `@view-transition` rule in the CSS Object Model.
-Note that [render blocking](#render_blocking) may be used to ensure that important parts of the new page are loaded before the transition starts.
-([Firefox bug 2084340](https://bugzil.la/2084340)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 161           | Yes                 |
-| Developer Edition | 160           | No                  |
-| Beta              | 160           | No                  |
-| Release           | 160           | No                  |
-
-- `dom.viewTransitions.cross-document.enabled`
-  - : Set to `true` to enable.
-
-### Render blocking
-
-The `blocking="render"` attribute of the {{HTMLElement("link",,"blocking")}}, {{HTMLElement("script",,"blocking")}}, and {{HTMLElement("style",,"blocking")}} elements is supported.
-This lets you block rendering of the page until the marked stylesheet has loaded or script has run, so the page doesn't first appear unstyled or incomplete.
-You can also use [`<link rel="expect">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect) with `blocking="render"` to block rendering until a particular element in the document has been parsed.
-The {{domxref("PerformanceResourceTiming.renderBlockingStatus")}} property indicates whether a resource blocked rendering.
-([Firefox bug 1751383](https://bugzil.la/1751383), [Firefox bug 2053279](https://bugzil.la/2053279)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 161           | Yes                 |
-| Developer Edition | 160           | No                  |
-| Beta              | 160           | No                  |
-| Release           | 160           | No                  |
-
-- `dom.element.blocking.enabled`
-  - : Set to `true` to enable.
-
 ### Lazy loading for video and audio
 
 The `loading` attribute of the {{HTMLElement("video", "", "#loading")}} and {{HTMLElement("audio", "", "#loading")}} elements, and the {{domxref("HTMLMediaElement.loading")}} property that reflects it, are now supported. With `loading="lazy"`, the browser defers loading the media, loading the video's poster image, and starting `autoplay` playback until the element is near the viewport. ([Firefox bug 2005072](https://bugzil.la/2005072)).
