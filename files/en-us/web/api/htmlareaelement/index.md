@@ -29,6 +29,8 @@ _Inherits properties from its parent {{domxref("HTMLElement")}}._
   - : A string containing the hostname in the referenced URL.
 - {{domxref("HTMLAreaElement.href")}}
   - : A string containing that reflects the [`href`](/en-US/docs/Web/HTML/Reference/Elements/area#href) HTML attribute, containing a valid URL of a linked resource.
+- {{domxref("HTMLAreaElement.hreflang")}}
+  - : A string that reflects the [`hreflang`](/en-US/docs/Web/HTML/Reference/Elements/area#hreflang) HTML attribute, indicating the language of the linked resource.
 - {{domxref("HTMLAreaElement.interestForElement")}} {{experimental_inline}} {{non-standard_inline}}
   - : Gets or sets the target element of an interest invoker, in cases where the associated {{htmlelement("area")}} element is specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers#creating_an_interest_invoker).
 - {{domxref("HTMLAreaElement.noHref")}} {{deprecated_inline}}
@@ -57,6 +59,8 @@ _Inherits properties from its parent {{domxref("HTMLElement")}}._
   - : A string that reflects the [`shape`](/en-US/docs/Web/HTML/Reference/Elements/area#shape) HTML attribute, indicating the shape of the hot-spot, limited to known values.
 - {{domxref("HTMLAreaElement.target")}}
   - : A string that reflects the [`target`](/en-US/docs/Web/HTML/Reference/Elements/area#target) HTML attribute, indicating the browsing context in which to open the linked resource.
+- {{domxref("HTMLAreaElement.type")}}
+  - : A string that reflects the [`type`](/en-US/docs/Web/HTML/Reference/Elements/area#type) HTML attribute, indicating the MIME type of the linked resource.
 - {{domxref("HTMLAreaElement.username")}}
   - : A string containing the username specified before the domain name.
 

@@ -84,6 +84,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   - : The hyperlink target for the area.
     Its value is a valid URL.
     This attribute may be omitted; if so, the `<area>` element does not represent a hyperlink.
+- `hreflang`
+  - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/lang).
 - `interestfor` {{experimental_inline}} {{non-standard_inline}}
   - : Defines the `<area>` element as an **interest invoker**. Its value is the `id` of the target element, which will be affected in some way (normally shown or hidden) when interest is shown or lost on the invoker element (for example, by hovering/unhovering or focusing/blurring it). See [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) for more details and examples.
 - `ping`
@@ -119,6 +121,9 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
       If there is no parent, acts the same as `_self`.
 
     Use this attribute only if the [`href`](#href) attribute is present.
+
+- `type`
+  - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
 
     > [!NOTE]
     > Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
