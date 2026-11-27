@@ -18,7 +18,7 @@ browser-compat: api.ShadowRoot.setHTMLUnsafe
 > [!NOTE]
 > {{domxref("ShadowRoot.setHTML()")}} should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.
 
-The **`setHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface can be used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and then use it to replace the existing tree in the Shadow DOM.
+The **`setHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface parses HTML input and replaces the existing tree in the Shadow DOM with the result, optionally applying a sanitizer configuration during parsing.
 
 ## Syntax
 
@@ -59,7 +59,12 @@ None (`undefined`).
 
 The **`setHTMLUnsafe()`** method can be used to parse a string of HTML, optionally filtering out unwanted elements and attributes, and use it to replace the existing Shadow DOM.
 
+If a sanitizer is specified, its configuration is applied during parsing, rather than to a complete tree after parsing.
+See [Sanitization during parsing](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_during_parsing).
+
 Unlike with {{domxref("ShadowRoot.innerHTML")}}, [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in the input will be parsed into the DOM.
+A top-level `<template shadowrootmode>` remains a regular template rather than attaching a new shadow root.
+When sanitizing, a shadow root is attached only if its host is kept and the sanitizer allows both the {{htmlelement("template")}} element and its `shadowrootmode` attribute.
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
 
 `setHTMLUnsafe()` doesn't perform any sanitization by default.

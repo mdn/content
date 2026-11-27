@@ -52,7 +52,8 @@ None (`undefined`).
 
 The **`setHTML()`** method provides an XSS-safe method to parse and sanitize a string of HTML and use it to replace the existing tree in the Shadow DOM.
 
-`setHTML()` removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer configuration.
+The sanitizer configuration is applied during parsing, and XSS-unsafe elements and attributes are always removed, even if allowed by the configuration.
+See [Sanitization during parsing](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_during_parsing).
 
 If no sanitizer is specified in the `options.sanitizer` parameter, `setHTML()` is used with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
 This configuration is suitable for the majority of use cases as it prevents XSS attacks, as well as other attacks like clickjacking or spoofing.
