@@ -21,6 +21,11 @@ This is useful when dealing with the difference between rendering on a standard 
 You can use {{domxref("Window.matchMedia", "window.matchMedia()")}} to check if the value of `devicePixelRatio` changes (which can happen, for example, if the user drags the window to a display with a different pixel density).
 See [the example below](#monitoring_screen_resolution_or_zoom_level_changes).
 
+> [!NOTE]
+> In Safari, the {{cssxref("@media/resolution", "resolution")}} media feature doesn't take page zoom into account, but `devicePixelRatio` does.
+> As a result, the `change` event doesn't fire when the page is zoomed, and once the page is zoomed it also stops firing when the window moves to a display with a different pixel density.
+> See [WebKit bug 317839](https://webkit.org/b/317839).
+
 ## Value
 
 A double-precision floating-point value indicating the ratio of the display's resolution in physical pixels to the resolution in CSS pixels. A value of 1 indicates a classic 96 DPI display, while a value of 2 is expected for HiDPI/Retina displays.
