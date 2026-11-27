@@ -91,7 +91,7 @@ The optional `fill` value, if used, can be placed anywhere in the declaration.
 ### Values
 
 - {{cssxref("&lt;number&gt;")}}
-  - : Represents an edge offset in _pixels_ for raster images and _coordinates_ for vector images. For vector images, the number is relative to the element's size, not the size of the source image, so percentages are generally preferable in these cases.
+  - : Represents an edge offset in _pixels_ for raster images and _coordinates_ for vector images. For vector images without natural dimensions, the image is first sized using the border image area as the default object size, so percentages can be easier to use when the slices should follow proportions of the image.
 - {{cssxref("&lt;percentage&gt;")}}
   - : Represents an edge offset as a percentage of the source image's size: the width of the image for horizontal offsets, the height for vertical offsets.
 - `fill`
@@ -210,6 +210,125 @@ sliceSlider.addEventListener("input", () => {
 #### Result
 
 {{EmbedLiveSample('Adjustable_border_width_and_slice', '100%', 400)}}
+
+### Sizing SVG border images
+
+This example demonstrates SVG border images, and the effects of the {{SVGAttr("viewBox")}} attribute on border image sizing by comparing three SVG border images with identical artwork but with and without the `viewBox` attribute and declared dimensions.
+
+We will apply three versions of the following SVG as the {{cssxref("border-image-source")}}, with the first having neither a natural size nor {{SVGAttr("viewBox")}}; the second no natural size but with `viewBox`; the third has both a natural size and `viewBox` set.
+
+```html live-sample___svg-artwork
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="gold" />
+  <rect x="10" width="80" height="10" fill="red" />
+  <rect x="90" y="10" width="10" height="80" fill="green" />
+  <rect x="10" y="90" width="80" height="10" fill="blue" />
+  <rect y="10" width="10" height="80" fill="purple" />
+  <rect width="10" height="10" fill="black" />
+  <rect x="90" width="10" height="10" fill="orange" />
+  <rect x="90" y="90" width="10" height="10" fill="cyan" />
+  <rect y="90" width="10" height="10" fill="deeppink" />
+</svg>
+```
+
+```css hidden live-sample___svg-artwork
+svg {
+  width: 100px;
+  height: 100px;
+}
+```
+
+{{EmbedLiveSample('svg-artwork', '100%', 120)}}
+
+#### HTML
+
+We include three paragraphs. The controls to change the value type of the `border-image-slice` property have been hidden for brevity:
+
+```html hidden live-sample___svg-border-comparison
+<fielset>
+  <legend>border-image-slice:</legend>
+  <label><input value="10" type="radio" name="size" checked>10</label>
+  <label><input value="10%" type="radio" name="size">10%</label>
+</fieldset>
+```
+
+```html live-sample___svg-border-comparison
+<p class="without-viewbox">Without viewBox</p>
+<p class="with-viewbox">With viewBox</p>
+<p class="with-dimensions">With viewBox and natural dimensions</p>
+```
+
+#### CSS
+
+We apply the same styling to all three paragraphs. The slices are initially set to use numeric offsets of `10`, with the resulting slices stretching to the `20px` border width.
+
+We've set the paragraphs to initially be `200px` by `100px`, making them resizable with the {{cssxref("resize")}} property. We've included a thin {{cssxref("outline")}} so the paragraph's size is apparent.
+
+We will use JavaScript set the {{cssxref("border-image-source")}}, to embed the SVGs as data URLs.
+
+```css live-sample___svg-border-comparison
+p {
+  box-sizing: content-box;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+  outline: 1px solid black;
+  border: 20px solid;
+  border-image-slice: 10;
+  border-image-width: 1;
+  border-image-repeat: stretch;
+  overflow: auto;
+  resize: both;
+}
+```
+
+```css hidden live-sample___svg-border-comparison
+:has(label:last-of-type input:checked) p {
+  border-image-slice: 10%;
+}
+```
+
+#### JavaScript
+
+We use the same artwork for all three images, changing only the attributes on the root `<svg>` element:
+
+```js live-sample___svg-border-comparison
+const artwork = `
+  <rect width="100" height="100" fill="gold" />
+  <rect x="10" width="80" height="10" fill="red" />
+  <rect x="90" y="10" width="10" height="80" fill="green" />
+  <rect x="10" y="90" width="80" height="10" fill="blue" />
+  <rect y="10" width="10" height="80" fill="purple" />
+  <rect width="10" height="10" fill="black" />
+  <rect x="90" width="10" height="10" fill="orange" />
+  <rect x="90" y="90" width="10" height="10" fill="cyan" />
+  <rect y="90" width="10" height="10" fill="deeppink" />
+`;
+
+const variants = {
+  ".without-viewbox": "",
+  ".with-viewbox": 'viewBox="0 0 100 100"',
+  ".with-dimensions": 'viewBox="0 0 100 100" width="100" height="100"',
+};
+
+for (const [selector, attributes] of Object.entries(variants)) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" ${attributes}>${artwork}</svg>`;
+  const url = `data:image/svg+xml,${encodeURIComponent(svg)}`;
+  document.querySelector(selector).style.borderImageSource = `url("${url}")`;
+}
+```
+
+#### Result
+
+Switch between numeric and percentage slices, and drag the bottom-right corner of each element to resize it. The slices initially use numeric offsets of `10`; selecting `10%` instead selects the outer tenth of each source image.
+
+{{EmbedLiveSample('svg-border-comparison', '100%', 540)}}
+
+Before slicing, the browser determines each image's [concrete size](/en-US/docs/Web/CSS/Reference/Values/image#concrete_size), using the border image area as the default object size. Initially, this area is `240` by `140`.
+
+- The first SVG has neither natural dimensions nor a natural aspect ratio, so its source viewport is initially `240` by `140`. The artwork remains `100` by `100` in the top-left corner, so the right and bottom borders are initially transparent. Resizing the element changes which parts of the artwork fall inside the slices, but the artwork itself never scales with the element.
+- The second SVG has a square natural aspect ratio due to the `viewBox`, so its source viewport is `140` by `140`, and the artwork is scaled to fill that viewport. With `10%`, the slices follow the scaled edges and corners. With `10`, the fixed offsets can cut through the scaled corners, leaving parts of them in the edge slices that are stretched along the border.
+- The third SVG is sized to its natural dimensions of `100` by `100` before slicing, regardless of the element's size. Both `10` and `10%` select a `10`-unit edge or corner, so the border stays consistent even as the element resizes.
 
 ## Specifications
 
