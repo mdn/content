@@ -16,13 +16,47 @@ The following is a collection of tips to improve canvas performance.
 
 If you find yourself repeating some of the same drawing operations on each animation frame, consider offloading them to an offscreen canvas. You can then render the offscreen image to your primary canvas as often as needed, without unnecessarily repeating the steps needed to generate it in the first place.
 
-```js
-myCanvas.offscreenCanvas = document.createElement("canvas");
-myCanvas.offscreenCanvas.width = myCanvas.width;
-myCanvas.offscreenCanvas.height = myCanvas.height;
+If the pre-rendered image won't change, convert it to an {{domxref("ImageBitmap")}} once, and draw the bitmap instead of the canvas. An `ImageBitmap` represents a bitmap image that can be drawn to a canvas without undue latency. Unlike a canvas, its content can't be changed after it's created, so the browser can prepare it for drawing once, rather than each time it's drawn.
 
-myCanvas.getContext("2d").drawImage(myCanvas.offscreenCanvas, 0, 0);
+When you pre-render into an {{domxref("OffscreenCanvas")}}, call its {{domxref("OffscreenCanvas.transferToImageBitmap()", "transferToImageBitmap()")}} method when you've finished drawing. This returns the rendered image as an `ImageBitmap` and leaves the offscreen canvas blank, so you can reuse it to pre-render the next object:
+
+```js
+// Pre-render the object once
+const offscreen = new OffscreenCanvas(64, 64);
+const offscreenCtx = offscreen.getContext("2d");
+offscreenCtx.fillStyle = "orange";
+offscreenCtx.beginPath();
+offscreenCtx.arc(32, 32, 32, 0, 2 * Math.PI);
+offscreenCtx.fill();
+const sprite = offscreen.transferToImageBitmap();
+
+// Draw the bitmap as often as needed, for example in each animation frame
+ctx.drawImage(sprite, x, y);
 ```
+
+When you no longer need a bitmap, call {{domxref("ImageBitmap.close()")}} to release its graphics resources straight away, rather than waiting for the garbage collector to free them. A closed bitmap can't be drawn again.
+
+### Prepare images in advance with `createImageBitmap()`
+
+You can also turn image files into `ImageBitmap` objects. The {{domxref("Window.createImageBitmap()", "createImageBitmap()")}} method takes an image source, such as an {{domxref("HTMLImageElement")}} or a {{domxref("Blob")}}, and returns a {{jsxref("Promise")}} that resolves to an `ImageBitmap`. When the source is a `Blob`, such as an image file fetched with {{domxref("Window.fetch()", "fetch()")}}, the image is read and decoded without blocking the main thread. Create your bitmaps before your animation starts, so they're ready to draw in each frame:
+
+```js
+async function startAnimation() {
+  // Fetch and decode the sprite before the animation starts
+  const response = await fetch("sprite.png");
+  const sprite = await createImageBitmap(await response.blob());
+
+  function draw() {
+    ctx.drawImage(sprite, x, y);
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+}
+
+startAnimation();
+```
+
+`createImageBitmap()` is also available in workers, as {{domxref("WorkerGlobalScope.createImageBitmap()")}}, and `ImageBitmap` objects are [transferable](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects). This means you can decode images in a worker and transfer the bitmaps to the main thread, or draw them in the worker using an `OffscreenCanvas`.
 
 ### Avoid floating-point coordinates and use integers instead
 
