@@ -2628,6 +2628,10 @@
       "inh": "DOMException",
       "impl": []
     },
+    "OverscrollEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "OVR_multiview2": {
       "inh": "",
       "impl": []
